@@ -19,7 +19,8 @@
     <properties>
         <java.version>17</java.version>
         <hutool-all.version>5.8.27</hutool-all.version>
-        <knife4j-openapi3-jakarta-spring-boot-starter.version>4.5.0</knife4j-openapi3-jakarta-spring-boot-starter.version>
+        <knife4j-openapi3-jakarta-spring-boot-starter.version>4.5.0
+        </knife4j-openapi3-jakarta-spring-boot-starter.version>
         <redisson.version>3.27.2</redisson.version>
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
@@ -44,6 +45,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <dependency>
@@ -57,11 +62,6 @@
 
         <!-- 数据访问 -->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>3.0.5</version>
-        </dependency>
-        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus.version}</version>
@@ -71,6 +71,7 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
+
 
         <!-- 工具类 -->
         <dependency>
@@ -140,16 +141,33 @@
             <version>${easyexcel.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.17.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <!-- no more than 2.3.3-->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.3</version>
+        </dependency>
+
         <!-- 测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter-test</artifactId>
-            <version>3.0.5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
