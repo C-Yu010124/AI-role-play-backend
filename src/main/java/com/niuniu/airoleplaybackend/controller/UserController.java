@@ -1,8 +1,8 @@
 package com.niuniu.airoleplaybackend.controller;
 
-import com.niuniu.airoleplaybackend.dto.UserLoginRequestDTO;
-import com.niuniu.airoleplaybackend.dto.UserLoginResponseDTO;
-import com.niuniu.airoleplaybackend.dto.UserRegisterRequestDTO;
+import com.niuniu.airoleplaybackend.dto.req.UserLoginRequestDTO;
+import com.niuniu.airoleplaybackend.dto.resp.UserLoginResponseDTO;
+import com.niuniu.airoleplaybackend.dto.req.UserRegisterRequestDTO;
 import com.niuniu.airoleplaybackend.result.Result;
 import com.niuniu.airoleplaybackend.service.IUserService;
 import com.niuniu.airoleplaybackend.web.Results;
@@ -61,9 +61,9 @@ public class UserController {
      *
      * @return 结果
      */
-    // @GetMapping("/admin")
-    // @PreAuthorize("hasRole('ADMIN')")
-    // public Result<String> adminOnly() {
-    //     return Result.success("当前用户拥有管理员权限，可以访问此接口");
-    // }
+     @GetMapping("/admin")
+     @PreAuthorize("hasRole('ADMIN')")
+     public Result<String> adminOnly() {
+         return Results.success("当前用户拥有管理员权限，可以访问此接口");
+     }
 }
