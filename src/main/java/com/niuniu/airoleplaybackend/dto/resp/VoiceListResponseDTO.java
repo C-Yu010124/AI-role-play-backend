@@ -35,10 +35,6 @@ public class VoiceListResponseDTO {
          */
         private String category;
 
-        /**
-         * 更新时间（毫秒）
-         */
-        private Integer updatetime;
     }
 
 }

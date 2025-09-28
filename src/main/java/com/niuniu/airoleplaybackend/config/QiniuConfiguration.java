@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class QiniuConfiguration {
     private String qiniuApiKey;
-    private String qiniuBaseUrl;
     private String deepseekApiKey;
+    private String qiniuBaseUrl;
     private String deepseekBaseUrl;
     private String qiniuAsrUrl;
     private String qiniuTtsUrl;
